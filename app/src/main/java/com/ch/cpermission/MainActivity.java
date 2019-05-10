@@ -72,7 +72,17 @@ public class MainActivity extends AppCompatActivity implements PermissListener<S
                 CPermission.with(this)
                         .permiss()
                         .permission(PermissGroup.CALL_PHONE)
-                        .listener(this).start();
+                        .listener(new PermissListener<String>() {
+                            @Override
+                            public void onGranted(List<String> granted) {
+                                showtoast("权限申请成功");
+                            }
+
+                            @Override
+                            public void onDenied(List<String> granted) {
+                                showtoast("权限被拒绝");
+                            }
+                        }).start();
                 break;
             case R.id.btn_instil:
                 CPermission.with(this).permiss()
@@ -107,8 +117,6 @@ public class MainActivity extends AppCompatActivity implements PermissListener<S
 
                             }
                         }).start();
-
-                CPermission.with(this).install().start();
                 break;
             case R.id.btn_setting:
 
@@ -166,5 +174,23 @@ public class MainActivity extends AppCompatActivity implements PermissListener<S
         }
         return dir + "app-debug.apk";
 
+    }
+
+
+    private void aVoid() {
+        CPermission.with(this)
+                .permiss()
+                .permission(PermissGroup.CALL_PHONE)
+                .listener(new PermissListener<String>() {
+                    @Override
+                    public void onGranted(List<String> granted) {
+                        showtoast("权限申请成功");
+                    }
+
+                    @Override
+                    public void onDenied(List<String> granted) {
+                        showtoast("权限被拒绝");
+                    }
+                }).start();
     }
 }
