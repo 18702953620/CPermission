@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">cper</string>
+
+    <string name="permission_name_calendar">日历</string>
+    <string name="permission_name_camera">相机</string>
+    <string name="permission_name_contacts">通讯录</string>
+    <string name="permission_name_accounts">手机账号</string>
+    <string name="permission_name_location">位置信息</string>
+    <string name="permission_name_microphone">麦克风</string>
+    <string name="permission_name_phone">电话</string>
+    <string name="permission_name_sensors">身体传感器</string>
+    <string name="permission_name_sms">短信</string>
+    <string name="permission_name_storage">存储空间</string>
+
+    <string name="message_permission_always_failed">请在设置中给与我们以下权限:\n\n%1$s</string>
+
+    <string name="resume">去设置</string>
+    <string name="cancel">取消</string>
+    <string name="tip">请注意</string>
+
+</resources>
